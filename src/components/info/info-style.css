@@ -1,0 +1,101 @@
+.tm-section-info {
+	background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 640px;
+}
+
+.tm-bg-black-translucent { background-color: rgba(0, 0, 0, 0.5); }
+
+.tm-content-box {
+	height: 100%;
+	min-height: 640px;
+	max-width: 480px;	
+	padding: 40px;	
+	display: -ms-flexbox;	
+	display: -webkit-flex;	
+	display: flex;   
+	-webkit-flex-direction: column;   
+	    -ms-flex-direction: column;   
+	        flex-direction: column; 
+    -ms-flex-pack: center;    
+        -webkit-justify-content: center;    
+            justify-content: center;
+}
+
+.tm-content-box-right {
+	margin-left: auto;
+	margin-right: 0;
+}
+
+.tm-flex-center {
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+    -ms-flex-direction: column;
+        -webkit-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: center;
+        -webkit-justify-content: center;
+            justify-content: center;
+}
+
+.tm-section-title {
+	color: white;
+	font-size: 1.8rem;
+	margin-bottom: 40px;	
+}
+
+.tm-content-box-inner>p{
+	color: wheat;
+}
+
+.tm-content-box-inner>p>a {
+	outline: none;
+	text-decoration: none;
+	padding: 2px 1px 0;
+  }
+  .tm-content-box-inner>p>a:link {
+	color: #94be71;
+  }
+  
+  .tm-content-box-inner>p>a:visited {
+	color: #69b629;
+  }
+  
+  .tm-content-box-inner>p>a:focus {
+	border-bottom: 1px solid;
+	background: #c1f399;
+  }
+  
+  .tm-content-box-inner>p>a:hover {
+	border-bottom: 1px solid;     
+	background: #befa93;
+  }
+  
+  .tm-content-box-inner>p>a:active {
+	background: #265301;
+	color: #CDFEAA;
+  }
+
+.tm-page-content-width {
+	max-width: 1200px;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.tm-content-box-inner>img{
+	height:200px;
+	width:400px;
+}
+
+
+.tm-section-info-pog { background-image: url(../../img/bg-1.jpg)}
+
+.tm-section-info-rg { background-image: url(../../img/bg-2.jpg)}
+
+.tm-section-info-red { background-image: url(../../img/buyt-img2.jpg)}
+
+.tm-section-info-doc { background-image: url(../../img/bg-3.jpg)}
+
+.tm-section-info-ob { background-image: url(../../img/home.jpg)}

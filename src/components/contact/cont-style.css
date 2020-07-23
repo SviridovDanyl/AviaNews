@@ -1,0 +1,39 @@
+.cont {
+    height: calc( 100vh - 50px);
+    /* The image used */
+    background-image: url('../../img/cont.jpg');
+    /* Full height */
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cont>p{
+    color: black;
+}
+li {
+    list-style-type: none; 
+    }
+    .container>.row>.col-sm>a {
+        outline: none;
+        text-decoration: none;
+        padding: 2px 1px 0;
+      }
+      .container>.row>.col-sm>a:link {
+        color: #94be71;
+      }
+      
+      .container>.row>.col-sm>a:visited {
+        color: #69b629;
+      }
+      
+      .container>.row>.col-sm>a:focus {
+        border-bottom: 1px solid;
+        background: #c1f399;
+      }
+      
+      .container>.row>.col-sm>a:active {
+        background: #265301;
+        color: #CDFEAA;
+      }

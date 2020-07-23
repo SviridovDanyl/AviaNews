@@ -1,0 +1,12 @@
+.plane {
+    .card-img-holder {
+        overflow: hidden;
+    }
+    img {
+        transition: all .2s ease-in-out;
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.2);
+        }
+    }
+}
