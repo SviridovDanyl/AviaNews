@@ -19,7 +19,7 @@ export const Planes = (options) => {
         events,
         ...options,
         getUrl() {
-            return `article/?type=${this.model.id}`
+            return `article/?type=major`
         },
         showComponents() {
             this.getModel(this.showEachPlane);

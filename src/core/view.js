@@ -70,7 +70,7 @@ export const view = (options) => {
         },
 
         getUrl() {
-            return `article/${this.model.id}`;
+            return `article?${this.model.id}`;
         },
 
         getModel(cb) {
