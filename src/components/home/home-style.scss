@@ -5,14 +5,11 @@
 
 #home-container {
     height: calc( 100vh - 50px);
-    /* The image used */
     background-image: url('../../img/bg-34.jpg');
-    /* Full height */
-    /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    p{
-        color: black;
+    h1,p{
+        color: whitesmoke;
     }
 }

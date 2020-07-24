@@ -4,7 +4,6 @@ import './plane-style.scss';
 import { PlaneDetails } from '../plane-details/plane-details-component';
 
 const events = [
-    // { event: 'click', selector: '.btn.like', func: 'onLikeClick' },
     { event: 'click', selector: '.plane-img', func: 'onShowDetails' }
 ];
 
@@ -13,17 +12,11 @@ const events = [
  * @param {object} options -set of properties
  */
 export const Plane = (options) => {
-    // to view we pass a set of properties
-    // but we exted it a little bit.
     return view({
         template,
         events,
         ...options,
-        onLikeClick() {
-            this.model.like++; // изменение объекта модели
-
-            this.updateModel(this.updateUi); // синхронизация модели с сервером.
-        },
+/* Вызов функции отображение модального окна с новостями*/
         onShowDetails() {
             const details = PlaneDetails({ model: this.model });
             details.render(this.$parent);

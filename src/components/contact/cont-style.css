@@ -1,9 +1,6 @@
 .cont {
     height: calc( 100vh - 50px);
-    /* The image used */
     background-image: url('../../img/cont.jpg');
-    /* Full height */
-    /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

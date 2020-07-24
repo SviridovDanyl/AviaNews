@@ -6,8 +6,6 @@ import { emptyModel } from "../utils/const";
  * @return {object} - instance of component;* 
  */
 export const view = (options) => {
-    // const { template, components, events, model } = options;
-
     return {
         subComponents: [],
         template: `<div></div>`,
@@ -16,6 +14,8 @@ export const view = (options) => {
          * Функция отображения компонента на странице.
          * @param {jquery object} $toElement - jquery элемент в который вставляем текущий компонент.
          */
+
+        // отображение елементов на странице
         render($toElement) {
             this.$parent = $toElement;
             if (this.$el) {
@@ -34,23 +34,7 @@ export const view = (options) => {
             return this;
         },
 
-        updateUi(model) {
-            this.model = model ? model : this.model;
-            if (this.model) {
-                this.reRender();
-            } else {
-                this.$el.remove();
-            }
-        },
-
-        reRender() {
-            const $newEl = $(this.template(this.model));
-            this.$el.replaceWith($newEl);
-            this.$el = $newEl;
-
-            this.bindEvents();
-        },
-
+        //создание временной переменной
         createTemplate() {
             if (!_.isFunction(this.template)) {
                 this.template = _.template(this.template);
@@ -69,10 +53,7 @@ export const view = (options) => {
 
         },
 
-        getUrl() {
-            return `article?${this.model.id}`;
-        },
-
+        // запрос данных с хранилища
         getModel(cb) {
             const self = this;
 
@@ -83,41 +64,6 @@ export const view = (options) => {
                 console.log('Error on GET request!');
                 console.error(error);
             });
-        },
-
-        saveModel(cb) {
-            const self = this;
-
-            $.ajax({
-                url: `http://localhost:3000/article`,
-                method: 'POST',
-                contentType: 'application/json',
-                data: JSON.stringify(this.model)
-            }).then(cb.bind(self));
-        },
-
-        updateModel(cb) {
-            const self = this;
-
-            $.ajax({
-                url: `http://localhost:3000/article/${this.model.id}`,
-                method: 'PUT',
-                contentType: 'application/json',
-                data: JSON.stringify(this.model)
-            }).then(cb.bind(self));
-        },
-
-        deleteModel(cb) {
-            const self = this;
-
-            $.ajax({
-                url: `http://localhost:3000/article/${this.model.id}`,
-                method: 'DELETE',
-            }).then(cb.bind(self));
-        },
-
-        syncModel(model) {
-            this.updateUi(model);
         },
 
         ...options
